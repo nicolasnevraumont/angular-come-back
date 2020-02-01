@@ -12,11 +12,21 @@ import { PostsService } from '../services/posts.service';
 })
 export class PostsListComponent implements OnInit {
   posts$: Observable<Post[]>;
+  selectedPost: Post;
 
   constructor(private postsService: PostsService) { }
 
   ngOnInit(): void {
     this.posts$ = this.postsService.getPosts();
+  }
+
+  view(post: Post) {
+      this.selectedPost = post;
+  }
+
+  onDeleteNotify(post: Post) {
+    this.postsService.delete(post);
+    ;
   }
 
 }

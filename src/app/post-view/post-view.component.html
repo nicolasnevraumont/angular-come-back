@@ -1,0 +1,5 @@
+<div *ngIf="post">
+    <h1>{{post.title}}</h1>
+    {{post.body}}
+    <button mat-button (click)="delete()">Delete</button>
+</div>

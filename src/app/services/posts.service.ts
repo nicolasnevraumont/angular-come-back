@@ -14,9 +14,13 @@ export class PostsService {
 
   private posts: Array<Post> = [];
 
-  constructor(private http: HttpClient ) { }
+  constructor(private httpClient: HttpClient ) { }
 
-  getPosts (): Observable<Post[]> {
-    return this.http.get<Post[]>(this.resourceUrl)
+  getPosts(): Observable<Post[]> {
+    return this.httpClient.get<Post[]>(this.resourceUrl);
+  }
+
+  delete(post: Post) {
+    this.httpClient.delete(`${this.resourceUrl}/${post.id}`).subscribe();
   }
 }

@@ -7,22 +7,26 @@ import { PostsListComponent } from './posts-list/posts-list.component';
 import { PostAddComponent } from './post-add/post-add.component';
 import { RouterModule } from '@angular/router';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatTabsModule} from '@angular/material/tabs';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatButtonModule } from '@angular/material/button';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
+import { PostViewComponent } from './post-view/post-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PostsListComponent,
-    PostAddComponent
+    PostAddComponent,
+    PostViewComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MatToolbarModule,
     MatTabsModule,
+    MatButtonModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([

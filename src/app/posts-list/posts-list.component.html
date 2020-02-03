@@ -1,6 +1,8 @@
-<app-post-view style="float: right" [post]="selectedPost" (deleteNotify)='onDeleteNotify($event)'></app-post-view>
-<ul>
-    <li *ngFor="let post of posts$ | async">
-        {{ post.title }} <button mat-button (click)="view(post)">View</button>
-    </li>
-</ul>
+<div class="flex">
+    <mat-nav-list>
+        <mat-list-item *ngFor="let post of posts$ | async" (click)="view(post)">
+            {{ post.title }}
+        </mat-list-item>
+    </mat-nav-list>
+    <app-post-view [post]="selectedPost" (deleteNotify)='onDeleteNotify($event)'></app-post-view>
+</div>

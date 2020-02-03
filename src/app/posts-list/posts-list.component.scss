@@ -1,0 +1,9 @@
+.flex {
+    display: flex;
+}
+mat-nav-list {
+    overflow-y: auto; overflow-x: hidden; height: 90vh; width: 33vw;
+}
+app-post-view {
+    width: 66vw;
+}

@@ -10,6 +10,7 @@ import { RouterModule } from '@angular/router';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatButtonModule } from '@angular/material/button';
+import {MatListModule} from '@angular/material/list';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { PostViewComponent } from './post-view/post-view.component';
@@ -27,6 +28,7 @@ import { PostViewComponent } from './post-view/post-view.component';
     MatToolbarModule,
     MatTabsModule,
     MatButtonModule,
+    MatListModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot([
